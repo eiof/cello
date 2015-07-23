@@ -1,0 +1,29 @@
+
+$width: 400px;
+$animationTime: 1.5s;
+$animationStyle: linear;
+$colorOuter: rgba(133,206,188,0);
+$colorInner: rgba(133,206,188,0.2);
+
+.loading {
+	overflow: hidden;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+	background-color: #eee;
+	display: block;
+
+	&.on {
+		height: 100%;
+		opacity: 0.5;
+		transition: opacity 0.2s ease;
+	}
+
+	&.off {
+		height: 0%;
+		opacity: 0;
+		transition: height 0.1s linear 0.2s, opacity 0.2s ease;
+	}
+}
