@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "start": "node app",
+    "postinstall": "gulp build"
+  },
   "engines": {
     "node": ">=0.10.0"
   },
