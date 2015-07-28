@@ -1,9 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "start": "node app",
-    "postinstall": "gulp build"
-  },
   "engines": {
     "node": ">=0.10.0"
   },
@@ -37,6 +33,7 @@
     "backbone": "^1.2.0",
     "classnames": "^2.1.2",
     "events": "^1.0.2",
+    "express": "^5.0.0-alpha.2",
     "flux": "^2.0.3",
     "jquery": "^2.1.4",
     "moment": "^2.10.3",

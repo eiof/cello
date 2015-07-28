@@ -4,7 +4,6 @@ var React = require('react');
 var Button = require('react-bootstrap').Button;
 var FontAwesome = require('../utils/font-awesome.jsx');
 var DocsWrapper = require('../utils/docs-wrapper.jsx');
-
 var User = require('../../resources/trello/user.js');
 
 var Header = React.createClass({

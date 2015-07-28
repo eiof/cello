@@ -32,23 +32,3 @@ var TestSuiteListItem = React.createClass({
 });
 
 module.exports = TestSuiteListItem;
-
-// var rows = this.collection.map(function (model) {
-// 	var lastActivity = model.get('dateLastActivity') ?
-// 		moment(model.get('dateLastActivity')).calendar() : '\u2014';
-// 	var dueDate = model.get('due') ?
-// 		moment(model.get('due')).format('MM/DD/YYYY') : '\u2014';
-// 	var badges = model.get('badges');
-// 	return (
-// 		<tr key={model.get('id')}>
-// 			<td className="text-center"><input type='checkbox' /></td>
-// 			<td>{model.get('name')}</td>
-// 			<td>{model.get('idMembers')[0]}</td>
-// 			<td>
-// 				<TestResults items={badges.checkItems} itemsChecked={badges.checkItemsChecked} />
-// 			</td>
-// 			<td>{lastActivity}</td>
-// 			<td>{dueDate}</td>
-// 		</tr>
-// 	);
-// });
