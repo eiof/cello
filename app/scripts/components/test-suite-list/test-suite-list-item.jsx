@@ -12,7 +12,7 @@ var TestSuiteListItem = React.createClass({
 		var model = this.props.testCase;
 		var lastActivity = model.get('dateLastActivity') ?
 			moment(model.get('dateLastActivity')).calendar() : '\u2014';
-		var dueDate = model.get('due') ?
+		var lastTestRun = model.get('due') ?
 			moment(model.get('due')).format('MM/DD/YYYY') : '\u2014';
 		var badges = model.get('badges');
 		var member = model.get('members')[0] ?
@@ -24,8 +24,8 @@ var TestSuiteListItem = React.createClass({
 				<td>
 					<TestResults testResult={model.get('testResult')} />
 				</td>
+				<td>{lastTestRun}</td>
 				<td>{lastActivity}</td>
-				<td>{dueDate}</td>
 			</tr>
 		);
 	}

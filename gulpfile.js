@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var reactify = require('reactify');
+var jasmine = require('gulp-jasmine');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -81,7 +82,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts', 'browserify'], function () {
+gulp.task('serve', ['styles', 'fonts', 'browserify', 'jasmine'], function () {
   browserSync({
     notify: false,
     port: 9000,
@@ -123,6 +124,11 @@ gulp.task('wiredep', function () {
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));
+});
+
+gulp.task('jasmine', function () {
+  return gulp.src('test/spec/test.js')
+    .pipe(jasmine());
 });
 
 gulp.task('build', ['jshint', 'html', 'images', 'styles', 'fonts', 'extras', 'browserify'], function () {

@@ -46,7 +46,7 @@ var TestSuiteList = React.createClass({
 	},
 	_getTableHeaders: function () {
 		var tableHeaders = [];
-		var columns = ['Title', 'Assignee', 'Test Result', 'Last Activity', 'Due Date'];
+		var columns = ['Title', 'Assignee', 'Last Test Result', 'Last Test Run', 'Last Activity'];
 		columns.forEach(function (column) {
 			tableHeaders.push(<th key={column}>{column}</th>);
 		});
